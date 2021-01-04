@@ -1,0 +1,72 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="horizontalMarginNone">0dp</dimen>
+    <dimen name="horizontalMarginXSmall">4dp</dimen>
+    <dimen name="horizontalMarginSmall">8dp</dimen>
+    <dimen name="horizontalMarginMedium">16dp</dimen>
+    <dimen name="horizontalMarginLarge">24dp</dimen>
+    <dimen name="horizontalMarginXLarge">32dp</dimen>
+    <dimen name="horizontalMarginXXLarge">40dp</dimen>
+    <dimen name="horizontalMarginXXXLarge">48dp</dimen>
+    <dimen name="verticalMarginNone">0dp</dimen>
+    <dimen name="verticalMarginXSmall">4dp</dimen>
+    <dimen name="verticalMarginSmall">8dp</dimen>
+    <dimen name="verticalMarginMedium">16dp</dimen>
+    <dimen name="verticalMarginLarge">24dp</dimen>
+    <dimen name="verticalMarginXLarge">32dp</dimen>
+    <dimen name="verticalMarginXXLarge">40dp</dimen>
+    <dimen name="verticalMarginXXXLarge">48dp</dimen>
+    <dimen name="verticalMarginXXXXLarge">96dp</dimen>
+
+    <!--BUTTON-->
+    <dimen name="buttonHeight">58dp</dimen>
+    <dimen name="minIconSize">44dp</dimen>
+
+    <!--CORNER-->
+    <dimen name="cornerNone">0dp</dimen>
+    <dimen name="cornerSmall">4dp</dimen>
+    <dimen name="cornerMedium">5dp</dimen>
+    <dimen name="cornerBig">16dp</dimen>
+    <dimen name="cornerFull">999dp</dimen>
+
+    <!--BORDER WIDTH-->
+    <dimen name="borderWidthNone">0dp</dimen>
+    <dimen name="borderWidthSmall">1dp</dimen>
+    <dimen name="borderWidthMedium">2dp</dimen>
+    <dimen name="borderWidthBig">4dp</dimen>
+
+    <!--OPACITY-->
+    <item name="opacityOpaque" format="float" type="dimen">0.72</item>
+    <item name="opacityMedium" format="float" type="dimen">0.40</item>
+    <item name="opacityLight" format="float" type="dimen">0.24</item>
+
+    <!--TEXT SIZES-->
+    <dimen name="textTitle">35sp</dimen>
+    <dimen name="textTitleSmall">25sp</dimen>
+    <dimen name="textBig">20sp</dimen>
+    <dimen name="textMedium">16sp</dimen>
+    <dimen name="textParagraph">14sp</dimen>
+    <dimen name="textSmall">12sp</dimen>
+    <dimen name="textExtraSmall">10sp</dimen>
+
+    <!--TEXT SPACING-->
+    <dimen name="spacingTitle">0dp</dimen>
+    <dimen name="spacingTitleSmall">0dp</dimen>
+    <dimen name="spacingBig">0dp</dimen>
+    <dimen name="spacingMedium">0dp</dimen>
+    <dimen name="spacingParagraph">0dp</dimen>
+    <dimen name="spacingSmall">0dp</dimen>
+    <dimen name="spacingExtraSmall">0dp</dimen>
+
+    <!--TEXT LINES-->
+    <dimen name="lineTitle">0dp</dimen>
+    <dimen name="lineTitleSmall">0dp</dimen>
+    <dimen name="lineBig">0dp</dimen>
+    <dimen name="lineMedium">0dp</dimen>
+    <dimen name="lineParagraph">0dp</dimen>
+    <dimen name="lineSmall">0dp</dimen>
+    <dimen name="lineExtraSmall">0dp</dimen>
+
+    <!--CONSTRAINTS BIAS-->
+    <dimen name="bias_align_top">0.0</dimen>
+</resources>
