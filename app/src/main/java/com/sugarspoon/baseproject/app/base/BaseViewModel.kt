@@ -1,18 +1,21 @@
 package com.sugarspoon.baseproject.app.base
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import kotlinx.coroutines.flow.MutableStateFlow
+import com.sugarspoon.baseproject.utils.extensions.SingleLiveEvent
+import io.reactivex.disposables.CompositeDisposable
 
-abstract class BaseViewModel<State, Routes> : ViewModel() {
+abstract class BaseViewModel<Intent, State> : ViewModel() {
 
-    abstract val initialViewState: State
+    protected val compositeDisposable = CompositeDisposable()
 
-    private val internalState = MutableStateFlow(initialViewState)
+    protected val _state = SingleLiveEvent<State>()
+    val state: LiveData<State> = _state
 
-    val state: MutableStateFlow<State>
-        get() = internalState
+    abstract fun handle(intent: Intent)
 
-    private var _state = MutableStateFlow(state)
-
-    abstract fun navigateByRoute(routes: Routes)
+    override fun onCleared() {
+        super.onCleared()
+        compositeDisposable.dispose()
+    }
 }

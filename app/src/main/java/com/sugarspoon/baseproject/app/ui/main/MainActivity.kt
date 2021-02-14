@@ -2,6 +2,7 @@ package com.sugarspoon.baseproject.app.ui.main
 
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.lifecycle.Observer
 import com.sugarspoon.baseproject.R
 import com.sugarspoon.baseproject.app.base.BaseActivity
 import com.sugarspoon.baseproject.utils.extensions.safeCollect
@@ -23,17 +24,14 @@ class MainActivity : BaseActivity() {
     }
 
     private fun setupUiCollectors() {
-        viewModel.state.safeCollect {
-            it?.run {
-                loading?.let { mainLoadingPb.setVisible(it) }
-                textTitle?.let { mainTextTv.text = getString(it) }
-            }
-        }
+        viewModel.state.observe(this, Observer {
+
+        })
     }
 
     private fun setupListeners() {
         mainRouterBt.setOnClickListener {
-
+            viewModel.handle(MainViewIntent.ClickButton)
         }
     }
 }
