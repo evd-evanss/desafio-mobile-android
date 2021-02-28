@@ -1,6 +1,4 @@
-include ':buildsources'
-include ':usecase'
 include ':domain'
 include ':data'
 include ':app'
-rootProject.name = "Base Project"
+rootProject.name = "Desafio Serasa - Evandro Costa"

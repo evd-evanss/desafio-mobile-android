@@ -49,7 +49,10 @@
     <color name="colorGrayLight">#D7D7D7</color>
     <color name="colorGray">#828282</color>
     <color name="colorGrayDark">#4F4F4F</color>
+    <color name="colorGrayNight">#242526</color>
+    <color name="colorGrayDay">#D7D7D7</color>
     <color name="colorRed">#EB5757</color>
+    <color name="colorRedVariant">#ED1919</color>
     <color name="colorGreen">#6FCF97</color>
     <color name="colorGreenDark">#4A8785</color>
 

@@ -27,6 +27,7 @@
     <dimen name="cornerSmall">4dp</dimen>
     <dimen name="cornerMedium">5dp</dimen>
     <dimen name="cornerBig">16dp</dimen>
+    <dimen name="cornerExtraBig">32dp</dimen>
     <dimen name="cornerFull">999dp</dimen>
 
     <!--BORDER WIDTH-->
@@ -69,4 +70,8 @@
 
     <!--CONSTRAINTS BIAS-->
     <dimen name="bias_align_top">0.0</dimen>
+    <dimen name="character_size">100dp</dimen>
+    <dimen name="cardview_default_width">250dp</dimen>
+    <dimen name="placeholder_default_text_message">20sp</dimen>
+    <dimen name="placeholder_default_icon_size">65dp</dimen>
 </resources>

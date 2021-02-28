@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">Base Project</string>
+    <string name="app_name">Desafio Serasa</string>
+    <string name="development_by">by Evandro Costa</string>
 
     <!--ACTIONS-->
     <string name="yes">Sim</string>
@@ -24,4 +25,9 @@
     <string name="placeholder_error_title">Ops!</string>
     <string name="placeholder_error_label">Houve um erro inesperado.</string>
     <string name="placeholder_error_button_label">Tentar novamente</string>
+    <string name="label_characters">Personagens</string>
+    <string name="character_head_top_five">Personagens top 5</string>
+    <string name="character_head_all">Mais personagens…</string>
+    <string name="dark_mode">Tema Noite</string>
+    <string name="light_mode">Tema Dia</string>
 </resources>

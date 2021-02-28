@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/verticalMarginMedium"
+    android:layout_marginStart="@dimen/horizontalMarginSmall"
+    android:layout_marginEnd="@dimen/horizontalMarginSmall"
+    app:cardCornerRadius="@dimen/cornerMedium"
+    style="@style/CardViewDayNight"
+    android:elevation="@dimen/cardview_default_elevation"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/itemCharacterNameTv"
+            tools:text="Ipsum Lorem"
+            style="@style/TextMedium"
+            android:layout_marginTop="@dimen/horizontalMarginMedium"
+            android:layout_marginStart="@dimen/horizontalMarginMedium"
+            android:layout_marginEnd="@dimen/horizontalMarginMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/itemCharacterPhotoIv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/horizontalMarginMedium"
+            android:layout_marginTop="@dimen/verticalMarginXSmall"
+            android:layout_marginEnd="@dimen/horizontalMarginMedium"
+            android:layout_marginBottom="@dimen/verticalMarginMedium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemCharacterNameTv"
+            tools:srcCompat="@tools:sample/avatars" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

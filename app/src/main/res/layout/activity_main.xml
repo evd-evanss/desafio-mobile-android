@@ -4,14 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".app.ui.main.MainActivity">
-
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/layout_toolbar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:background="@color/colorRedVariant"
+    tools:context=".app.features.main.MainActivity">
 
     <ProgressBar
         android:id="@+id/mainLoadingPb"
@@ -23,24 +17,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/mainTextTv"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/horizontalMarginMedium"
-        android:text="@string/app_name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/mainRouterBt"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/buttonHeight"
-        android:layout_margin="@dimen/horizontalMarginMedium"
-        android:text="@string/action_ok"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <include
+            layout="@layout/layout_toolbar" />
+
+        <fragment
+            android:id="@+id/homeNavHost"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/graph_main" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,4 +19,17 @@ dependencies {
     def hilt_lifecycle_version = '1.0.0-alpha02'
 
     implementation "com.google.dagger:hilt-android:$hilt_version"
+
+    // Retrofit
+    def retrofit_version = '2.9.0'
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.2.2'
+
+    //RX
+    def rxandroidVersion = "2.1.1"
+    def rxjavaVersion = "2.2.17"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroidVersion"
+    implementation "io.reactivex.rxjava2:rxjava:$rxjavaVersion"
 }
