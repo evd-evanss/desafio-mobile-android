@@ -9,5 +9,24 @@
         android:id="@+id/charactersFragment"
         tools:layout="@layout/fragment_character"
         android:name="com.sugarspoon.desafioserasa.app.features.characters.CharactersFragment"
-        android:label="@string/app_name" />
+        android:label="@string/app_name" >
+        <action
+            android:id="@+id/toDetails"
+            app:destination="@id/detailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        tools:layout="@layout/fragment_detail"
+        android:name="com.sugarspoon.desafioserasa.app.features.details.DetailsFragment"
+        android:label="@string/app_name" >
+
+        <argument
+            android:name="character"
+            app:argType="com.sugarspoon.domain.model.Result"/>
+    </fragment>
 </navigation>

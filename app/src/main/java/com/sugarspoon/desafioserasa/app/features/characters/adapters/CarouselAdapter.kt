@@ -1,13 +1,10 @@
 package com.sugarspoon.desafioserasa.app.features.characters.adapters
 
 import android.content.Context
-import android.net.Uri
-import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import com.sugarspoon.desafioserasa.R
 import com.sugarspoon.domain.model.Result
 import com.sugarspoon.domain.model.toPath
-import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.scopes.ActivityScoped
 import me.ibrahimyilmaz.kiel.adapterOf
 import javax.inject.Inject
@@ -16,6 +13,8 @@ import javax.inject.Inject
 class CarouselAdapter @Inject constructor(
     val context: Context
 ) {
+
+    var onItemAdapterClicked: ((Result) -> Unit)? = null
 
     fun create() = adapterOf<Result> {
         register(
@@ -27,6 +26,9 @@ class CarouselAdapter @Inject constructor(
                     Glide.with(context)
                         .load(character.thumbnail.toPath())
                         .into(itemPhoto)
+                    root.setOnClickListener {
+                        onItemAdapterClicked?.invoke(character)
+                    }
                 }
             }
         )

@@ -7,4 +7,5 @@ sealed class CharactersState {
     data class Error(val message: String) : CharactersState()
     data class LoadCarousel(val items: List<Result>) : CharactersState()
     data class LoadVerticalAdapter(val items: List<Result>) : CharactersState()
+    data class OpenDetails(val character: Result) : CharactersState()
 }

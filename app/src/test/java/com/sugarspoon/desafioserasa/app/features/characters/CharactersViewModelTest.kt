@@ -7,7 +7,6 @@ import com.sugarspoon.desafioserasa.app.features.base.BaseRxTest
 import com.sugarspoon.desafioserasa.data.usecase.UseCaseCharacters
 import com.sugarspoon.domain.model.mockResult
 import io.reactivex.Single
-import org.junit.After
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -39,7 +38,7 @@ class CharactersViewModelTest : BaseRxTest() {
         )
 
         //Act
-        charactersViewModel.handle(CharactersIntent.LoadData())
+        charactersViewModel.handle(CharactersIntent.LoadData)
 
         //Assert
         stateObserver.run {
@@ -47,20 +46,5 @@ class CharactersViewModelTest : BaseRxTest() {
             verify(this).onChanged(CharactersState.Loading(false))
             verify(this).onChanged(CharactersState.LoadCarousel(listOf(mockResult)))
         }
-    }
-
-    @Test
-    fun loadCharactersForLargeAdapterNotEmptyList_SetLoading_LoadItems() =  instantExecutorRule.run{
-        //Act
-        charactersViewModel.limit = 5
-        charactersViewModel.limit = 10
-
-        //Assert
-        assert(charactersViewModel.limit == 5)
-        assert(charactersViewModel.limit == 10)
-    }
-
-    @After
-    fun tearDown() {
     }
 }
