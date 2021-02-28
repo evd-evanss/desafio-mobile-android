@@ -1,8 +1,6 @@
 package com.sugarspoon.desafioserasa.app.features.characters.adapters
 
 import android.content.Context
-import android.net.Uri
-import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import com.sugarspoon.desafioserasa.R
 import com.sugarspoon.domain.model.Result
@@ -12,20 +10,25 @@ import me.ibrahimyilmaz.kiel.adapterOf
 import javax.inject.Inject
 
 @ActivityScoped
-class ItemsVerticalAdapter @Inject constructor(
+class VerticalAdapter @Inject constructor(
     val context: Context
 ) {
+
+    var onItemAdapterClicked: ((Result) -> Unit)? = null
 
     fun create() = adapterOf<Result> {
         register(
             layoutResource = R.layout.item_comics_large,
-            viewHolder = ::CarouselViewHolder,
+            viewHolder = ::VerticalViewHolder,
             onBindViewHolder = { holder, _, character ->
                 holder.run {
                     itemName.text = character.name
                     Glide.with(context)
                         .load(character.thumbnail.toPath())
                         .into(itemPhoto)
+                    root.setOnClickListener {
+                        onItemAdapterClicked?.invoke(character)
+                    }
                 }
             }
         )

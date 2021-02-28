@@ -2,10 +2,11 @@ package com.sugarspoon.desafioserasa.app.features.characters
 
 import android.os.Bundle
 import android.view.View
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sugarspoon.desafioserasa.app.base.BaseFragment
 import com.sugarspoon.desafioserasa.app.features.characters.adapters.CarouselAdapter
-import com.sugarspoon.desafioserasa.app.features.characters.adapters.ItemsVerticalAdapter
+import com.sugarspoon.desafioserasa.app.features.characters.adapters.VerticalAdapter
 import com.sugarspoon.desafioserasa.databinding.FragmentCharacterBinding
 import com.sugarspoon.desafioserasa.utils.extensions.scrollToEnd
 import com.sugarspoon.domain.model.Result
@@ -21,11 +22,11 @@ class CharactersFragment : BaseFragment<FragmentCharacterBinding>(
     @Inject
     lateinit var viewModel: CharactersViewModel
     @Inject
-    lateinit var factoryAdapter: CarouselAdapter
+    lateinit var factoryCarouselAdapter: CarouselAdapter
     @Inject
-    lateinit var factoryVerticalAdapter: ItemsVerticalAdapter
+    lateinit var factoryVerticalAdapter: VerticalAdapter
 
-    private val carouselAdapter by lazy { factoryAdapter.create() }
+    private val carouselAdapter by lazy { factoryCarouselAdapter.create() }
     private val comicsLargeAdapter by lazy { factoryVerticalAdapter.create() }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -68,6 +69,12 @@ class CharactersFragment : BaseFragment<FragmentCharacterBinding>(
         characterComicsRv.viewTreeObserver.addOnGlobalLayoutListener {
             characterComicsRv.scrollToEnd()
         }
+        factoryCarouselAdapter.onItemAdapterClicked = {
+            viewModel.handle(CharactersIntent.OpenDetails(character = it))
+        }
+        factoryVerticalAdapter.onItemAdapterClicked = {
+            viewModel.handle(CharactersIntent.OpenDetails(character = it))
+        }
     }
 
     private fun setupObservers() = viewModel.state.observe(viewLifecycleOwner) { state ->
@@ -76,6 +83,7 @@ class CharactersFragment : BaseFragment<FragmentCharacterBinding>(
             is CharactersState.LoadVerticalAdapter -> displayItems(items = state.items)
             is CharactersState.Loading -> displayLoading(isLoading = state.isLoading)
             is CharactersState.Error -> displayError(message = state.message)
+            is CharactersState.OpenDetails -> navigateToDetails(character = state.character)
         }
     }
 
@@ -85,8 +93,9 @@ class CharactersFragment : BaseFragment<FragmentCharacterBinding>(
         showToast("Total: ${items.size} revistas")
     }
 
-    private fun displayCarousel(items: List<Result>) =
+    private fun displayCarousel(items: List<Result>) {
         carouselAdapter.submitList(items)
+    }
 
     private fun displayLoading(isLoading: Boolean) = binding?.run {
         characterRefreshSr.isRefreshing = isLoading
@@ -94,5 +103,10 @@ class CharactersFragment : BaseFragment<FragmentCharacterBinding>(
 
     private fun displayError(message: String) = binding?.run {
         showToast(message)
+    }
+
+
+    private fun navigateToDetails(character: Result) = findNavController().run {
+        navigate(CharactersFragmentDirections.toDetails(character = character))
     }
 }

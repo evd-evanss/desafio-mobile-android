@@ -25,9 +25,12 @@
     <string name="placeholder_error_title">Ops!</string>
     <string name="placeholder_error_label">Houve um erro inesperado.</string>
     <string name="placeholder_error_button_label">Tentar novamente</string>
+
     <string name="label_characters">Personagens</string>
     <string name="character_head_top_five">Personagens top 5</string>
     <string name="character_head_all">Mais personagens…</string>
     <string name="dark_mode">Tema Noite</string>
     <string name="light_mode">Tema Dia</string>
+    <string name="details_head_description">Descrição</string>
+    <string name="details_description_unavailable">Não há informações disponíveis sobre este personagem</string>
 </resources>
