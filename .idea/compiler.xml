@@ -3,6 +3,7 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.7">
       <module name="Base_Project.app" target="1.8" />
+      <module name="Desafio_Android_-_Evandro_Costa.app" target="1.8" />
       <module name="Desafio_Serasa_-_Evandro_Costa.app" target="1.8" />
     </bytecodeTargetLevel>
   </component>
