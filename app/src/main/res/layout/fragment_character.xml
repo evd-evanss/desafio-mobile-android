@@ -30,6 +30,7 @@
             android:id="@+id/characterCarouselRv"
             android:layout_width="match_parent"
             android:layout_height="160dp"
+            android:layout_marginTop="@dimen/verticalMarginMedium"
             android:layout_marginStart="@dimen/horizontalMarginSmall"
             android:layout_marginEnd="@dimen/horizontalMarginSmall"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -74,7 +75,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView3"
                 tools:itemCount="3"
-                tools:listitem="@layout/item_comics_large" />
+                tools:listitem="@layout/item_characters_large" />
 
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 

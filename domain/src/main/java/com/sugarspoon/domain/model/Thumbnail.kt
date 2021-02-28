@@ -9,4 +9,5 @@ val fakeThumbnail = Thumbnail(
     extension = "",
     path = ""
 )
+
 fun Thumbnail.toPath() = "${path.replace("http", "https")}.$extension"

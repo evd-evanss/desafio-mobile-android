@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/FragmentStyle"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/detailHqTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextMedium"
+            android:layout_marginTop="@dimen/verticalMarginXXXLarge"
+            android:layout_marginStart="@dimen/horizontalMarginMedium"
+            android:layout_marginEnd="@dimen/horizontalMarginMedium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="HQ mais cara" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/detailHqImageIv"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="@dimen/verticalMarginMedium"
+            android:layout_marginStart="@dimen/horizontalMarginMedium"
+            android:layout_marginEnd="@dimen/horizontalMarginMedium"
+            tools:srcCompat="@tools:sample/avatars"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailHqTv" />
+
+        <TextView
+            android:id="@+id/detailHqDescriptionLabelTv"
+            style="@style/TextMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/verticalMarginMedium"
+            android:layout_marginStart="@dimen/horizontalMarginMedium"
+            android:layout_marginEnd="@dimen/horizontalMarginMedium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailHqImageIv"
+            android:text="@string/details_head_description"/>
+
+        <TextView
+            android:id="@+id/detailHqDescriptionTv"
+            style="@style/TextMedium"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/horizontalMarginMedium"
+            android:layout_marginTop="@dimen/verticalMarginMedium"
+            android:layout_marginEnd="@dimen/horizontalMarginMedium"
+            android:layout_marginBottom="@dimen/verticalMarginMedium"
+            android:textStyle="normal"
+            android:text="@string/details_description_unavailable"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailHqDescriptionLabelTv"
+            tools:text="@tools:sample/lorem/random" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
