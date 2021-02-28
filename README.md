@@ -13,9 +13,8 @@ que recebo na sequência. Ao clicar em um Personagem você é direcionado para u
 - [x] RxJava 
 - [x] Testes unitários
 - [x] Cache de imagens
-- [x] Tratamentos de erros
+- [ ] Tratamento de erros
 - [x] Padrão de Projeto e boas práticas de Orientação a Objetos.
-
 - [x] Componentes AAC:
 - ViewModel
 - Navigation
