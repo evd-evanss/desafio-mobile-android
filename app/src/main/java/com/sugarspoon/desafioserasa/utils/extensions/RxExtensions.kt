@@ -1,6 +1,6 @@
 package com.sugarspoon.desafioserasa.utils.extensions
 
-import com.sugarspoon.data.exception.RetrofitException
+import com.sugarspoon.utils.exceptions.RetrofitException
 import io.reactivex.Scheduler
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers

@@ -75,7 +75,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView3"
                 tools:itemCount="3"
-                tools:listitem="@layout/item_comics_large" />
+                tools:listitem="@layout/item_characters_large" />
 
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 

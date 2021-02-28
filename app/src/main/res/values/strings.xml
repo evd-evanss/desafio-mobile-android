@@ -2,35 +2,16 @@
     <string name="app_name">Desafio Serasa</string>
     <string name="development_by">by Evandro Costa</string>
 
-    <!--ACTIONS-->
-    <string name="yes">Sim</string>
-    <string name="no">Não</string>
-    <string name="action_ok">OK</string>
-    <string name="action_save">Salvar</string>
-    <string name="action_cancel">Cancelar</string>
-
-    <!--DIALOG MESSAGES-->
-    <string name="progress_dialog_standard_msg">Aguarde um momento.</string>
-
-    <!--ERRORS-->
-    <string name="network_error_timeout">Erro inesperado, por favor tente novamente.</string>
-    <string name="network_error_without_connection">Rede indisponível.</string>
-    <string name="network_error_unknown">Erro desconhecido, não foi possível completar sua requisição.</string>
-    <string name="unknown_error">Erro Desconhecido</string>
-    <string name="password_error">As senhas estão diferentes.</string>
-
-    <!--PLACEHOLDERS LABELS-->
-    <string name="placeholder_empty_label">Não existem resultados.</string>
-    <string name="placeholder_empty_title">Erro!</string>
-    <string name="placeholder_error_title">Ops!</string>
-    <string name="placeholder_error_label">Houve um erro inesperado.</string>
-    <string name="placeholder_error_button_label">Tentar novamente</string>
-
+    <!-- CHARACTER -->
     <string name="label_characters">Personagens</string>
     <string name="character_head_top_five">Personagens top 5</string>
     <string name="character_head_all">Mais personagens…</string>
-    <string name="dark_mode">Tema Noite</string>
-    <string name="light_mode">Tema Dia</string>
+
+    <!-- DETAILS -->
     <string name="details_head_description">Descrição</string>
     <string name="details_description_unavailable">Não há informações disponíveis sobre este personagem</string>
+
+    <!-- THEME -->
+    <string name="dark_mode">Tema Noite</string>
+    <string name="light_mode">Tema Dia</string>
 </resources>

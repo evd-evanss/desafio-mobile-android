@@ -1,9 +1,9 @@
 package com.sugarspoon.data.source
 
-import com.sugarspoon.data.model.response.CharactersResponse
-import kotlinx.coroutines.flow.Flow
+import com.sugarspoon.domain.model.Result
+import io.reactivex.Single
 
 interface MarvelDataSource {
 
-    suspend fun getCharacters(): Flow<CharactersResponse>
+    fun getCharacters(offset: Int, limit: Int): Single<List<Result>>
 }
