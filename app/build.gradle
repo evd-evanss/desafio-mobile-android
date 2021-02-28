@@ -7,10 +7,6 @@ plugins {
     id 'androidx.navigation.safeargs.kotlin'
 }
 
-def apikeyPropertiesFile = rootProject.file("apikey.properties")
-def apikeyProperties = new Properties()
-apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
-
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.1"
@@ -22,10 +18,9 @@ android {
         versionCode 1
         versionName "1.0"
 
-        buildConfigField("String", "API_KEY", apikeyProperties['API_KEY'])
-        buildConfigField("String", "BASE_URL", apikeyProperties['BASE_URL'])
-        buildConfigField("String", "PRIVATE_KEY", apikeyProperties['PRIVATE_KEY'])
-        buildConfigField("String", "PUBLIC_KEY", apikeyProperties['PUBLIC_KEY'])
+        buildConfigField "String", "BASE_URL", "\"https://gateway.marvel.com/v1/public/\""
+        buildConfigField "String", "PRIVATE_KEY", "\"4f2a90a8b8bdcf0a64f2e5d3c5d69aa957cfef3f\""
+        buildConfigField "String", "PUBLIC_KEY", "\"f404fca594ad5a73b914e0f6fdd1e8a5\""
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 

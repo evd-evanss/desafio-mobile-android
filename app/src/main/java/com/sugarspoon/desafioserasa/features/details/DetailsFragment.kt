@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.sugarspoon.desafioserasa.R
 import com.sugarspoon.desafioserasa.base.BaseFragment
 import com.sugarspoon.desafioserasa.databinding.FragmentDetailBinding
@@ -43,6 +44,7 @@ class DetailsFragment : BaseFragment<FragmentDetailBinding>(
         viewModel.handle(DetailsIntent.EvaluateDescription(description = result.description))
         Glide.with(requireContext())
             .load(result.thumbnail.toPath())
+            .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
             .into(detailHqImageIv)
     }
 

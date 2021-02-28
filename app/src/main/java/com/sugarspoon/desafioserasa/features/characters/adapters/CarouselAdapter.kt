@@ -2,6 +2,7 @@ package com.sugarspoon.desafioserasa.features.characters.adapters
 
 import android.content.Context
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.sugarspoon.desafioserasa.R
 import com.sugarspoon.domain.model.Result
 import com.sugarspoon.domain.model.toPath
@@ -25,6 +26,7 @@ class CarouselAdapter @Inject constructor(
                     itemName.text = character.name
                     Glide.with(context)
                         .load(character.thumbnail.toPath())
+                        .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
                         .into(itemPhoto)
                     root.setOnClickListener {
                         onItemAdapterClicked?.invoke(character)
